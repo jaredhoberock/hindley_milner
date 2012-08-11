@@ -3,6 +3,8 @@ hindley_milner
 
 An implementation of the Hindley-Milner type checking algorithm based on the [Python code by Robert Smallshire](http://www.smallshire.org.uk/sufficientlysmall/2010/04/11/a-hindley-milner-type-inference-implementation-in-python/), the [Scala code by Andrew Forrest](http://dysphoria.net/2009/06/28/hindley-milner-type-inference-in-scala/), the Perl code by Nikita Borisov, and [the paper "Basic Polymorphic Typechecking" by Cardelli](http://lucacardelli.name/Papers/BasicTypechecking.pdf).
 
+Interestingly, this implementation makes extensive use of ```boost::variant``` and ```boost::apply_visitor```.
+
 Build the demo program with:
 
 ```
