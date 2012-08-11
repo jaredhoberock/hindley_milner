@@ -14,7 +14,7 @@ $ scons
 Run the demo program with:
 
 ```
-$ ./test
+$ ./demo
 (letrec factorial = (fn n => (((cond (zero n)) 1) ((times n) (factorial (pred n))))) in (factorial 5)) : int
 (fn x => ((pair (x 3)) (x true))) : type mismatch: bool != int
 ((pair (f 4)) (f true)) : Undefined symbol f
