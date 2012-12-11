@@ -80,6 +80,12 @@ class type_operator
     using super_t::size;
     using super_t::operator[];
 
+    inline type_operator(const type_operator &other)
+      : super_t(other),
+        m_types(other.m_types),
+        m_kind(other.m_kind)
+    {}
+
     inline type_operator(const kind_type &kind)
       : m_kind(kind)
     {}
@@ -109,6 +115,14 @@ class type_operator
       : super_t(std::move(other)),
         m_kind(std::move(other.m_kind))
     {}
+
+    inline type_operator &operator=(const type_operator &other)
+    {
+      super_t::operator=(other);
+      m_types = other.m_types;
+      m_kind  = other.m_kind;
+      return *this;
+    }
 
     inline const kind_type &kind(void) const
     {
